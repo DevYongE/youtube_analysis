@@ -77,7 +77,7 @@ export default function YouTubeCreatePage() {
             {step === 1 && (
                 <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
                     <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6">
-                        <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                        <h2 className="text-xl font-semibold mb-4 flex items-center gap-2 text-white">
                             <Search className="text-blue-400" /> Find Viral Topics
                         </h2>
                         <div className="flex gap-4">
