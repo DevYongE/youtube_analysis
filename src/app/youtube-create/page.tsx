@@ -161,9 +161,9 @@ export default function YouTubeCreatePage() {
                                             if (!content.script) return alert("No script available to analyze.");
                                             try {
                                                 const btn = document.getElementById('gemini-btn');
-                                                if (btn) btn.innerText = "Analyzing Script with Gemini...";
+                                                if (btn) btn.innerText = "Analyzing Script with AI...";
 
-                                                const res = await fetch('/api/gemini/image-prompt', {
+                                                const res = await fetch('/api/image-prompts', {
                                                     method: 'POST',
                                                     body: JSON.stringify({ script: content.script })
                                                 });
@@ -176,16 +176,16 @@ export default function YouTubeCreatePage() {
                                                 }
                                             } catch (e) {
                                                 console.error(e);
-                                                alert("Error calling Gemini API");
+                                                alert("Error calling AI API");
                                             } finally {
                                                 const btn = document.getElementById('gemini-btn');
                                                 if (btn) btn.innerText = "Regenerate Image Prompts";
                                             }
                                         }}
                                         id="gemini-btn"
-                                        className="w-full bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/50 py-3 rounded-lg text-sm font-semibold transition-all flex items-center justify-center gap-2 mb-4"
+                                        className="w-full bg-green-600/20 hover:bg-green-600/30 text-green-400 border border-green-500/50 py-3 rounded-lg text-sm font-semibold transition-all flex items-center justify-center gap-2 mb-4"
                                     >
-                                        <Wand2 size={16} /> Generate Scene Prompts (Gemini)
+                                        <Wand2 size={16} /> Generate 6+ Scene Prompts (OpenAI)
                                     </button>
 
                                     {/* Display Generated Prompts */}
@@ -194,7 +194,7 @@ export default function YouTubeCreatePage() {
                                             {content.imagePrompts.map((item: any, idx: number) => (
                                                 <div key={idx} className="bg-black border border-gray-700 rounded-lg p-4">
                                                     <div className="flex items-center justify-between mb-2">
-                                                        <span className="text-xs font-bold text-blue-400 uppercase">{item.scene}</span>
+                                                        <span className="text-xs font-bold text-green-400 uppercase">{item.scene}</span>
                                                         <span className="text-xs text-gray-500">9:16</span>
                                                     </div>
                                                     <p className="text-sm text-gray-300 italic mb-2">{item.image_prompt}</p>
