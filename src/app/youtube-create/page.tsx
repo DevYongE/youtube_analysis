@@ -85,7 +85,7 @@ export default function YouTubeCreatePage() {
                                 value={topic}
                                 onChange={(e) => setTopic(e.target.value)}
                                 placeholder="Enter a niche (e.g., AI, Fitness, Cooking)..."
-                                className="flex-1 bg-black border border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all"
+                                className="flex-1 bg-black text-white placeholder-gray-400 border border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all"
                             />
                             <button
                                 onClick={handleFindTopics}
@@ -135,15 +135,15 @@ export default function YouTubeCreatePage() {
                             <div className="space-y-6">
                                 <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6">
                                     <h3 className="text-sm font-medium text-gray-400 mb-2 uppercase tracking-wider">Title</h3>
-                                    <input className="w-full bg-black border border-gray-700 rounded-lg p-3 text-lg font-bold text-white mb-4" defaultValue={content.title} />
+                                    <input className="w-full bg-black text-white border border-gray-700 rounded-lg p-3 text-lg font-bold mb-4" defaultValue={content.title} />
 
                                     <h3 className="text-sm font-medium text-gray-400 mb-2 uppercase tracking-wider">Description</h3>
-                                    <textarea className="w-full bg-black border border-gray-700 rounded-lg p-3 h-24 text-sm text-gray-300" defaultValue={content.description} />
+                                    <textarea className="w-full bg-black text-white border border-gray-700 rounded-lg p-3 h-24 text-sm" defaultValue={content.description} />
                                 </div>
 
                                 <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6">
                                     <h3 className="text-sm font-medium text-gray-400 mb-2 uppercase tracking-wider">Script</h3>
-                                    <textarea className="w-full bg-black border border-gray-700 rounded-lg p-3 h-64 font-mono text-sm leading-relaxed" defaultValue={content.script} />
+                                    <textarea className="w-full bg-black text-white border border-gray-700 rounded-lg p-3 h-64 font-mono text-sm leading-relaxed" defaultValue={content.script} />
                                 </div>
                             </div>
 
