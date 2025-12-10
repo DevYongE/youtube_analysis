@@ -12,7 +12,8 @@ export async function POST(request: Request) {
         }
 
         const genAI = new GoogleGenerativeAI(apiKey);
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash", generationConfig: { responseMimeType: "application/json" } });
+        // Use gemini-1.5-flash-001 or gemini-pro if flash is unavailable in region
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-001", generationConfig: { responseMimeType: "application/json" } });
 
         const promptText = `
       You are an expert AI Art Director for YouTube Shorts.
