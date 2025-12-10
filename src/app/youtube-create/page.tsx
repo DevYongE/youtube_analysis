@@ -156,12 +156,62 @@ export default function YouTubeCreatePage() {
                                     <h3 className="text-sm font-medium text-gray-400 mb-4 uppercase tracking-wider flex items-center gap-2">
                                         <ImageIcon size={16} /> Thumbnail / Image Prompt
                                     </h3>
-                                    <div className="bg-black border border-gray-700 rounded-lg p-4 text-sm text-purple-300 italic mb-4">
-                                        {content.imagePrompt}
-                                    </div>
-                                    <button className="w-full bg-purple-600/20 hover:bg-purple-600/30 text-purple-400 border border-purple-500/50 py-3 rounded-lg text-sm font-semibold transition-all">
-                                        Generate Image in Nano Banana
+                                    <button
+                                        onClick={async () => {
+                                            if (!content.script) return alert("No script available to analyze.");
+                                            try {
+                                                const btn = document.getElementById('gemini-btn');
+                                                if (btn) btn.innerText = "Analyzing Script with Gemini...";
+
+                                                const res = await fetch('/api/gemini/image-prompt', {
+                                                    method: 'POST',
+                                                    body: JSON.stringify({ script: content.script })
+                                                });
+                                                const data = await res.json();
+
+                                                if (data.prompts) {
+                                                    setContent({ ...content, imagePrompts: data.prompts });
+                                                } else {
+                                                    alert("Failed to generate prompts: " + (data.error || "Unknown error"));
+                                                }
+                                            } catch (e) {
+                                                console.error(e);
+                                                alert("Error calling Gemini API");
+                                            } finally {
+                                                const btn = document.getElementById('gemini-btn');
+                                                if (btn) btn.innerText = "Regenerate Image Prompts";
+                                            }
+                                        }}
+                                        id="gemini-btn"
+                                        className="w-full bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/50 py-3 rounded-lg text-sm font-semibold transition-all flex items-center justify-center gap-2 mb-4"
+                                    >
+                                        <Wand2 size={16} /> Generate Scene Prompts (Gemini)
                                     </button>
+
+                                    {/* Display Generated Prompts */}
+                                    {content.imagePrompts && content.imagePrompts.length > 0 ? (
+                                        <div className="space-y-4">
+                                            {content.imagePrompts.map((item: any, idx: number) => (
+                                                <div key={idx} className="bg-black border border-gray-700 rounded-lg p-4">
+                                                    <div className="flex items-center justify-between mb-2">
+                                                        <span className="text-xs font-bold text-blue-400 uppercase">{item.scene}</span>
+                                                        <span className="text-xs text-gray-500">9:16</span>
+                                                    </div>
+                                                    <p className="text-sm text-gray-300 italic mb-2">{item.image_prompt}</p>
+                                                    <button
+                                                        className="text-xs bg-gray-800 hover:bg-gray-700 px-2 py-1 rounded text-white flex items-center gap-1"
+                                                        onClick={() => navigator.clipboard.writeText(item.image_prompt)}
+                                                    >
+                                                        <Copy size={12} /> Copy Prompt
+                                                    </button>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    ) : (
+                                        <div className="bg-black border border-gray-700 rounded-lg p-4 text-sm text-gray-500 text-center italic">
+                                            Click above to generate Nano Banana prompts for each scene.
+                                        </div>
+                                    )}
                                 </div>
 
                                 <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6">
