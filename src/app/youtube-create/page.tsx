@@ -143,7 +143,10 @@ export default function YouTubeCreatePage() {
 
                                 <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6">
                                     <h3 className="text-sm font-medium text-gray-400 mb-2 uppercase tracking-wider">Script</h3>
-                                    <textarea className="w-full bg-black text-white border border-gray-700 rounded-lg p-3 h-64 font-mono text-sm leading-relaxed" defaultValue={content.script} />
+                                    <textarea
+                                        className="w-full bg-black text-white border border-gray-700 rounded-lg p-3 h-64 font-mono text-sm leading-relaxed"
+                                        defaultValue={typeof content.script === 'object' ? Object.entries(content.script).map(([k, v]) => `[${k.toUpperCase()}]\n${v}`).join('\n\n') : content.script}
+                                    />
                                 </div>
                             </div>
 
