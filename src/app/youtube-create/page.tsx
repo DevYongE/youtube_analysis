@@ -106,7 +106,7 @@ export default function YouTubeCreatePage() {
                                     onClick={() => handleGenerateContent(t)}
                                     className="bg-gray-900 hover:bg-gray-800 border border-gray-800 hover:border-red-500/50 p-6 rounded-2xl text-left transition-all group"
                                 >
-                                    <h3 className="font-semibold text-lg mb-2 group-hover:text-red-400 transition-colors">{t}</h3>
+                                    <h3 className="font-semibold text-lg mb-2 text-white group-hover:text-red-400 transition-colors">{t}</h3>
                                     <p className="text-sm text-gray-500">Click to generate script & assets</p>
                                 </button>
                             ))}

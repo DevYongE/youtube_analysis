@@ -17,7 +17,7 @@ export async function POST(request: Request) {
             const completion = await openai.chat.completions.create({
                 model: "gpt-4o",
                 messages: [
-                    { role: "system", content: "You are a viral YouTube Shorts expert. Generate 5 highly engaging, viral-potential video topics for the given niche. Return only the topics as a JSON array of strings." },
+                    { role: "system", content: "You are a viral YouTube Shorts expert. Generate 5 highly engaging, viral-potential video topics for the given niche in Korean (한국어). Return only the topics as a JSON array of strings." },
                     { role: "user", content: `Niche: ${prompt}` }
                 ],
                 response_format: { type: "json_object" }
@@ -35,7 +35,7 @@ export async function POST(request: Request) {
             const completion = await openai.chat.completions.create({
                 model: "gpt-4o",
                 messages: [
-                    { role: "system", content: "You are a professional YouTube content creator. Create detailed content for a Shorts video. Return JSON with: title (engaging, viral), description (SEO optimized), script (hook, body, CTA), tags (array of hashtags), imagePrompt (for AI thumbnail generator)." },
+                    { role: "system", content: "You are a professional YouTube content creator. Create detailed content for a Shorts video in Korean (한국어). Return JSON with: title (engaging, viral), description (SEO optimized), script (hook, body, CTA), tags (array of hashtags), imagePrompt (for AI thumbnail generator, in English for better compatibility)." },
                     { role: "user", content: `Topic: ${prompt}` }
                 ],
                 response_format: { type: "json_object" }
