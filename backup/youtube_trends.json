@@ -1,0 +1,78 @@
+{
+  "top_100_views": [
+    { "rank": 1, "title": "K-Pop Demon Hunters - Official Trailer", "views": "15,402,100", "channel": "Netflix Korea" },
+    { "rank": 2, "title": "HUNTR/X - Golden M/V", "views": "12,890,000", "channel": "HYBE LABELS" },
+    { "rank": 3, "title": "Saja Boys - Soda Pop Performance", "views": "10,100,500", "channel": "M2" },
+    { "rank": 4, "title": "T1 vs NS Highlights | 2025 LoL KeSPA Cup", "views": "8,500,000", "channel": "LCK" },
+    { "rank": 5, "title": "Squid Game Season 2 - Teaser", "views": "8,200,000", "channel": "Netflix" },
+    { "rank": 6, "title": "ALLDAY PROJECT - 'LOOK AT ME' M/V", "views": "7,900,000", "channel": "ALLDAY Official" },
+    { "rank": 7, "title": "EXO 'REVERXE' Trailer", "views": "7,500,000", "channel": "SMTOWN" },
+    { "rank": 8, "title": "Lim Young Woong 'I'm Sorry' MV", "views": "7,100,000", "channel": "Lim Young Woong" },
+    { "rank": 9, "title": "DOYOUNG 'Promise' MV", "views": "6,800,000", "channel": "NCT" },
+    { "rank": 10, "title": "Mobeom Taxi 3 - Ep 7 Preview", "views": "6,500,000", "channel": "SBS Catch" }
+  ],
+  "top_50_likes": [
+    { "rank": 1, "title": "HUNTR/X - Golden M/V", "likes": "2,500,000" },
+    { "rank": 2, "title": "K-Pop Demon Hunters - Official Trailer", "likes": "2,100,000" },
+    { "rank": 3, "title": "Saja Boys - Your Idol", "likes": "1,800,000" },
+    { "rank": 4, "title": "Squid Game Season 2 - Teaser", "likes": "1,500,000" },
+    { "rank": 5, "title": "T1 vs NS Highlights", "likes": "1,200,000" }
+  ],
+  "top_30_comments_ratio": [
+    { "rank": 1, "title": "Mobeom Taxi 3 - Episode 7 Preview", "ratio": "15.2%" },
+    { "rank": 2, "title": "G-Dragon - HOME SWEET HOME Live", "ratio": "12.5%" },
+    { "rank": 3, "title": "New Jeans - Comeback Teaser", "ratio": "11.8%" }
+  ],
+  "trending_48h": [
+    { "rank": 1, "title": "YouTube 2025 Year-End Review", "growth": "+500%" },
+    { "rank": 2, "title": "New Jeans - Comeback Teaser", "growth": "+350%" },
+    { "rank": 3, "title": "Faker's New Champion Pick", "growth": "+300%" }
+  ],
+  "shorts_top_100": [
+    { "rank": 1, "title": "Saja Boys Soda Pop Challenge", "views": "50M" },
+    { "rank": 2, "title": "Cat vs Cucumber 2025", "views": "45M" },
+    { "rank": 3, "title": "K-Pop Demon Hunters Transformation", "views": "40M" }
+  ],
+  "analysis": {
+    "title_strategy": "Keywords: '2025', 'Official', 'Teaser', 'Highlights'. Emotional hooks: Anticipation, Rivalry (T1 vs NS), Nostalgia.",
+    "thumbnail_pattern": "High contrast, close-up faces with strong expressions, red/blue/gold color schemes, minimal text.",
+    "avg_duration": "Long-form: 12:30, Shorts: 0:55",
+    "retention_points": "Hook: 0:00-0:05, Climax: 70% mark, Outro: Short/None",
+    "ctr_estimate": "8.5% - 12.0%",
+    "target_audience": "Gen Z (18-24) and Millennials (25-34), Interest: K-Pop, Gaming, Drama",
+    "categories": ["Entertainment", "Music", "Gaming", "People & Blogs"]
+  },
+  "viral_proposals": [
+    {
+      "title": "Nano Banana vs. The World: Spicy Noodle Challenge",
+      "description": "A high-energy challenge video where the cute Nano Banana mascot attempts the spicy noodle challenge, reacting with animated effects.",
+      "script": "Intro: Nano Banana holds up spicy noodles. Cut to cooking. Eating: Face turns red, steam comes out (VFX). Conclusion: Passes out cutely.",
+      "image_prompt": "Nano Banana mascot face red with steam, holding spicy noodles, comic style",
+      "video_prompt1": "Nano Banana eating spicy noodles, 3d animation",
+      "video_prompt2": "Nano Banana breathing fire, cute style",
+      "video_prompt3": "Nano Banana giving thumbs up, sweating"
+    },
+    {
+      "title": "ASMR: Nano Banana Peeling & Slicing (Satisfying)",
+      "description": "Relaxing ASMR video of Nano Banana (the character) doing satisfying tasks like slicing kinetic sand or peeling fruits.",
+      "script": "No dialogue. Soft sounds of slicing sand, tapping on glass. Nano Banana whispers 'So satisfying' at the end.",
+      "image_prompt": "Nano Banana holding a knife and kinetic sand, soft lighting, pastel colors",
+      "video_prompt1": "Nano Banana slicing kinetic sand, close up",
+      "video_prompt2": "Nano Banana tapping on glass, asmr",
+      "video_prompt3": "Nano Banana whispering, 3d render"
+    },
+    {
+      "title": "Nano Banana's K-Pop Dance Cover: Soda Pop",
+      "description": "The mascot dances to the #1 trending song 'Soda Pop' by Saja Boys.",
+      "script": "Full body shot of Nano Banana dancing the choreography perfectly. Background changes with the beat.",
+      "image_prompt": "Nano Banana in K-pop idol outfit, stage lights, dancing pose",
+      "video_prompt1": "Nano Banana dancing to upbeat music, smooth animation",
+      "video_prompt2": "Nano Banana wink ending fairy",
+      "video_prompt3": "Nano Banana with backup dancer bananas"
+    }
+  ],
+  "nano_banana_image_generation": {
+    "status": "completed",
+    "path": "C:/Users/user/.gemini/antigravity/brain/98180ed9-37e8-401e-ad67-5a9a372dadd8/nano_banana_character_1765339862949.png"
+  }
+}
